@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+  <children>
+      <SplitPane dividerPositions="0.5, 0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+        <items>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="95.0" fitWidth="651.0" layoutX="-2.0" nodeOrientation="INHERIT" opacity="0.4" pickOnBounds="true">
+                     <image>
+                        <Image url="@PapaJohnsLogo.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                <MenuBar layoutX="487.0" opacity="0.85" prefHeight="25.0" prefWidth="162.0">
+                  <menus>
+                    <Menu mnemonicParsing="false" text="Home" />
+                    <Menu mnemonicParsing="false" text="Search Results">
+                      <items>
+                        <MenuItem mnemonicParsing="false" text="Dominos" />
+                              <MenuItem mnemonicParsing="false" text="Papa Johns" />
+                      </items>
+                    </Menu>
+                  </menus>
+                </MenuBar>
+                  <Label prefHeight="26.0" prefWidth="149.0" text="Restaurant Advisor">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="231.0" layoutY="22.0" prefHeight="51.0" prefWidth="188.0" text="Papa John's">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Line endX="100.0" fill="RED" layoutX="323.0" layoutY="62.0" startX="-100.0" stroke="RED" strokeWidth="3.0" />
+               </children>
+            </AnchorPane>
+            <Line endX="532.0" endY="3.0" startX="-110.0" startY="3.0" stroke="#f80505" strokeWidth="5.0" />
+          <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="88.0" prefWidth="535.0">
+               <children>
+                  <Label layoutY="-3.0" prefHeight="17.0" prefWidth="398.0" text="Hours of Operation: Monday through Thursday 10AM – 11PM, Friday through Sunday 10AM - 1AM">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="18.0" prefHeight="17.0" prefWidth="149.0" text="Type of dining: Fast Casual">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="29.0" prefHeight="17.0" prefWidth="149.0" text="Price Range: $$">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="40.0" prefHeight="17.0" prefWidth="149.0" text="Rating: ***** ">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="51.0" prefHeight="17.0" prefWidth="219.0" text="Address: 11504 W North Ave, Milwaukee, WI 53226 ">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="61.0" prefHeight="17.0" prefWidth="149.0" text="Phone Number: (414) 258-7272 ">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="71.0" prefHeight="17.0" prefWidth="149.0" text="Email: help@papajohns.com">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="7.0" prefHeight="17.0" prefWidth="149.0" text="Types of cuisine: American, Pizza">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Line endX="532.0" startX="-110.0" stroke="#f50505" strokeWidth="5.0" />
+      <GridPane prefHeight="150.0" prefWidth="645.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="pepperoni" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pepperoni Pizza&#10;Small: $10.24&#10;Medium: $12.49&#10;Large: $14.74">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="sausage" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color:white;" text="Sausage Pizza&#10;Small: $10.24&#10;Medium: $12.49&#10;Large: $14.74" GridPane.columnIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="cheese" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color:white;" text="Cheese Pizza&#10;Small: $8.99&#10;Medium: $10.99&#10;Large: $12.99" GridPane.columnIndex="2">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="cheeseburger" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color:white;" text="CheeseBurger Pizza&#10;Small: $13.99&#10;Medium: $15.99&#10;Large: $17.99" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="bbqmeats" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color:white;" text="BBQ Meats Pizza&#10;Small: $13.99&#10;Medium: $15.99&#10;Large: $17.99" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="theworks" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color:white;" text="The Works Pizza&#10;Small: $13.99&#10;Medium: $15.99&#10;Large: $17.99" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="3.0" />
+         </padding>
+      </GridPane>
+      <Line endX="532.0" startX="-110.0" stroke="#fc0606" strokeWidth="5.0" />
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="25.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="order" onAction="#handleOrder" layoutX="294.0" mnemonicParsing="false" text="Order" />
+         </children>
+    </AnchorPane>
+      <Line endX="532.0" startX="-110.0" stroke="#fc0606" strokeWidth="5.0" />
+      <VBox prefHeight="71.0" prefWidth="640.0">
+         <children>
+            <Label text="REVIEWS">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <TextArea prefHeight="200.0" prefWidth="200.0" text="John Doe&#10;3 Stars&#10;Decent service, the food was not exceptional though.">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </TextArea>
+         </children>
+      </VBox>
+  </children>
+</VBox>

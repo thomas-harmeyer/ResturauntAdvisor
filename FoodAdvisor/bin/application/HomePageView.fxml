@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <SplitPane dividerPositions="0.7" orientation="VERTICAL" prefHeight="137.0" prefWidth="600.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="login" mnemonicParsing="false" onAction="#handleEventLogin" text="Login" />
+                  <MenuBar fx:id="searchMenuBar" layoutX="385.0" opacity="0.85" prefHeight="26.0" prefWidth="213.0">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="Home" />
+                        <Menu mnemonicParsing="false" text="Search Results">
+                           <items>
+                              <MenuItem fx:id="Change" mnemonicParsing="false" onAction="#handleEventDominos" text="Dominos" />
+                              <MenuItem fx:id="changePapaJohns" mnemonicParsing="false" onAction="#handleEventPapaJohns" text="Papa Johns" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <Label layoutX="151.0" layoutY="26.0" prefHeight="51.0" prefWidth="297.0" text="Restaurant Advisor">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Line endX="140.0" fill="RED" layoutX="302.0" layoutY="68.0" startX="-155.0" stroke="RED" strokeWidth="3.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="39.0" prefWidth="598.0">
+               <children>
+                  <TextField layoutX="8.0" layoutY="6.0" prefHeight="25.0" prefWidth="584.0" text="Search Restaurants by: name or location..." />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <GridPane prefHeight="263.0" prefWidth="610.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="61.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea editable="false" minHeight="-Infinity" prefHeight="25.0" prefWidth="305.0" text="Top Restaurants:" />
+            <TextArea editable="false" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" text="Favorite Restaurants:" GridPane.rowIndex="2" />
+            <ImageView fitHeight="113.0" fitWidth="200.0" pickOnBounds="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DominosLocationPicture.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="116.0" fitWidth="200.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@CasualDiningLocationPicture.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="114.0" fitWidth="200.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@FineDiningLocationPicture.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="200.0" pickOnBounds="true" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@PapaJohnsStore.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="107.0" fitWidth="200.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DominosLocationPicture.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="108.0" fitWidth="200.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@CasualDiningLocationPicture.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

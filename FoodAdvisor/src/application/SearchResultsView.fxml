@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.7" orientation="VERTICAL" prefHeight="137.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <MenuBar layoutX="436.0" opacity="0.85" prefHeight="25.0" prefWidth="162.0">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="Home" />
+                        <Menu mnemonicParsing="false" text="Search Results">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Dominos" />
+                              <MenuItem mnemonicParsing="false" text="Papa Johns" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <Label prefHeight="26.0" prefWidth="149.0" text="Restaurant Advisor">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="183.0" layoutY="38.0" prefHeight="51.0" prefWidth="232.0" text="Search Results">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Line endX="110.0" fill="RED" layoutX="299.0" layoutY="80.0" startX="-125.0" stroke="RED" strokeWidth="3.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="39.0" prefWidth="598.0">
+               <children>
+                  <Text layoutX="232.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sort By: Relevance" wrappingWidth="133.13671875" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.27" prefHeight="367.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane prefHeight="365.0" prefWidth="168.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Pricing:&#10;$ &#10;$$ &#10;$$$ &#10;$$$$&#10;$$$$$ ">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Type of Food:&#10;Fast Food&#10;Fast Casual&#10;Casual Dining&#10;Family Style&#10;Fine Dining " GridPane.rowIndex="1">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Cuisine:&#10;American&#10;Mexican&#10;Indian&#10;Pizza&#10;Sandwich&#10;Chinese&#10;Italian &#10;" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea editable="false" prefHeight="83.0" prefWidth="168.0" text="Rating:&#10;⍟ ⍟ &amp; up&#10;⍟ ⍟ ⍟ &amp; up&#10;⍟ ⍟ ⍟ ⍟ &amp; up&#10;⍟ ⍟ ⍟ ⍟ ⍟" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane prefHeight="302.0" prefWidth="416.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="133.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="309.0" minWidth="10.0" prefWidth="301.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="102.0" fitWidth="126.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@DominosLocationPicture.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Dominos&#10;&#10;$ | ⍟ ⍟ ⍟&#10;Fast Food&#10;Pizza" GridPane.columnIndex="1" />
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Potbelly&#10;&#10;$$$ | ⍟ ⍟ ⍟&#10;Casual Dining&#10;American" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Fish-House&#10;&#10;$$$$$ | ⍟ ⍟ ⍟ ⍟&#10;Fine Dining&#10;American" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ImageView fitHeight="100.0" fitWidth="125.0" pickOnBounds="true" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@CasualDiningLocationPicture.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="102.0" fitWidth="126.0" pickOnBounds="true" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@FineDiningLocationPicture.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</VBox>
