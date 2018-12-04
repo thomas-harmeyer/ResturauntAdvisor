@@ -77,9 +77,21 @@ public class Main extends Application implements Initializable {
 	// SearchResultsView.
 	@FXML
 	public void reviewSubmit(ActionEvent event) throws ClassNotFoundException, IOException {
-		addReview(reviewText.getText());
-		addReview(Main.user.getUsername());
+		if (Main.user != null) {
+			addReview(reviewText.getText());
+			addReview(Main.user.getUsername());
+		}else {
+			//Ishan put that login code
+			/*
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+		}
 	}
+
 	@FXML
 	public void handleEventDominos(ActionEvent event) throws ClassNotFoundException, IOException {
 		final Stage stage = (Stage) searchMenuBar.getScene().getWindow();
@@ -88,8 +100,8 @@ public class Main extends Application implements Initializable {
 		loader.setLocation(Main.class.getResource("DominosView.fxml"));
 		root = (VBox) loader.load();
 		Scene scene = new Scene(root);
-		VBox reviewsVox = (VBox)root.getChildren().get(6);
-		DominoStrings =(VBox) reviewsVox.getChildren().get(2);
+		VBox reviewsVox = (VBox) root.getChildren().get(6);
+		DominoStrings = (VBox) reviewsVox.getChildren().get(2);
 		stage.setScene(scene);
 		addReview(("This food sucks"));
 		ArrayList<String> dominosStrings = getDominosReivews();

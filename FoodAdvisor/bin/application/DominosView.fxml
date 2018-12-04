@@ -206,7 +206,7 @@
             </Label>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextArea fx:id="reviewText" text="Write a review..." />
+                  <TextArea fx:id="reviewText" />
                   <Button fx:id="reviewSubmit" mnemonicParsing="false" onAction="#reviewSubmit" text="Post Review" />
                </children>
             </HBox>
