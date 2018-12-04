@@ -1,5 +1,6 @@
 package application;
 
+
 public class Restaraunt {
 	private String name;
 	private String price;

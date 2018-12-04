@@ -8,7 +8,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,7 +18,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main" >
+<VBox prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
   <children>
       <SplitPane dividerPositions="0.5, 0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
         <items>
@@ -118,7 +117,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button  fx:id="smallonetopping" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" text="Small 1-Topping Pizza:&#10;$3.00&#10;100 calories">
+            <Button fx:id="smallonetopping" mnemonicParsing="false" onAction="#handlePizzaSelection" prefHeight="200.0" prefWidth="200.0" text="Small 1-Topping Pizza:&#10;$3.00&#10;100 calories">
                <font>
                   <Font size="9.0" />
                </font>
@@ -192,7 +191,7 @@
       <Line endX="532.0" startX="-110.0" stroke="#fc0606" strokeWidth="5.0" />
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="25.0" prefWidth="600.0">
          <children>
-            <Button fx:id="order" onAction="#handleOrder" layoutX="294.0" mnemonicParsing="false" text="Order" />
+            <Button fx:id="order" layoutX="294.0" mnemonicParsing="false" onAction="#handleOrder" text="Order" />
          </children>
     </AnchorPane>
       <Line endX="532.0" startX="-110.0" stroke="#fc0606" strokeWidth="5.0" />
@@ -203,11 +202,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <TextArea prefHeight="200.0" prefWidth="200.0" text="Joe Doe:&#10;No Stars&#10;Domino's more like DomiNO's. TRASH! Everyone here talked too much, and the food was too hot when I got it. No one should ever go here.">
-               <font>
-                  <Font size="9.0" />
-               </font>
-            </TextArea>
+            <VBox fx:id="DominoStrings" prefHeight="200.0" prefWidth="100.0" />
          </children>
       </VBox>
   </children>

@@ -28,6 +28,7 @@ public class LoginController {
 	@FXML
 	private TextField passwordTextField;
 
+
 	public void loginButtonClick() throws ClassNotFoundException, IOException {
 
 		if (LoginController.check(usernameTextField.getText(), passwordTextField.getText(),
@@ -47,7 +48,7 @@ public class LoginController {
 		System.out.println("TRYING");
 		Stage firstStage = (Stage) button.getScene().getWindow();
 		firstStage.close();
-		String fxmlResource = "Test.fxml";
+		String fxmlResource = "HomePageView.fxml";
 		Parent panel;
 		panel = FXMLLoader.load(getClass().getResource(fxmlResource));
 		Scene scene = new Scene(panel);
@@ -95,6 +96,7 @@ public class LoginController {
 	private static boolean check(String usern, String pass, ArrayList<User> users) {
 		for (User user : users) {
 			if (user.getUsername().equals(usern) && user.getPassword().equals(pass)) {
+				Main.user = user;
 				return true;
 			}
 		}
