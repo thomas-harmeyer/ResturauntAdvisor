@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class User implements Serializable {
-	
+
 	private String username = "";
 	private String password = "";
 
@@ -15,7 +15,7 @@ public class User implements Serializable {
 
 	public User() {
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}

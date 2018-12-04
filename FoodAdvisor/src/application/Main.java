@@ -23,10 +23,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.TextArea;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -37,13 +37,17 @@ public class Main extends Application implements Initializable {
 	public static User user = null;
 	@FXML
 	private MenuBar searchMenuBar;
+	@FXML
+	private VBox DominoStrings;
+	@FXML
+	private Button reviewSubmit;
+	@FXML
+	private TextArea reviewText;
 	private int cheesePizza, pepperoniPizza, sausagePizza, cheeseburgerPizza, theworksPizza, bbqmeatsPizza;
 	private int s1topping, s2topping, s3topping, s4topping, m1topping, m2topping, m3topping, m4topping, l1topping,
 			l2topping, l3topping, l4topping;
 	private double grandTotal;
 	private boolean loggedIn = false;
-	@FXML
-	private VBox DominoStrings;
 
 	@Override
 	public void start(Stage stage) {
@@ -72,28 +76,33 @@ public class Main extends Application implements Initializable {
 	// TODO: Will be called on mouseclick event on the Dominos button in the
 	// SearchResultsView.
 	@FXML
+	public void reviewSubmit(ActionEvent event) throws ClassNotFoundException, IOException {
+		addReview(reviewText.getText());
+		addReview(Main.user.getUsername());
+	}
+	@FXML
 	public void handleEventDominos(ActionEvent event) throws ClassNotFoundException, IOException {
 		final Stage stage = (Stage) searchMenuBar.getScene().getWindow();
-		
-		try {
-			VBox root = new VBox();
-
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("DominosView.fxml"));
-			root = (VBox) loader.load();
-			this.addUser(("asdf"));
-			ArrayList<String> dominosStrings = getDominosReivews();
-			for (String String : dominosStrings) {
-				System.out.println("A: "+String);
-				DominoStrings.getChildren().add(new Text(String));
+		VBox root = new VBox();
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("DominosView.fxml"));
+		root = (VBox) loader.load();
+		Scene scene = new Scene(root);
+		VBox reviewsVox = (VBox)root.getChildren().get(6);
+		DominoStrings =(VBox) reviewsVox.getChildren().get(2);
+		stage.setScene(scene);
+		addReview(("This food sucks"));
+		ArrayList<String> dominosStrings = getDominosReivews();
+		for (String String : dominosStrings) {
+			System.out.println("A: " + String);
+			if (DominoStrings == null) {
+				System.out.println("Null");
 			}
-			Scene scene = new Scene(root);
-			stage.setScene(scene);
+			DominoStrings.getChildren().add(new Text(String));
 			stage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
 	}
+	// }
 
 	public static ArrayList<String> getDominosReivews() throws IOException, ClassNotFoundException {
 		File usersFile = new File("src/dominosString.txt");
@@ -119,7 +128,7 @@ public class Main extends Application implements Initializable {
 		return users;
 	}
 
-	private static void addUser(String String) throws ClassNotFoundException, IOException {
+	private static void addReview(String String) throws ClassNotFoundException, IOException {
 		ArrayList<String> users = Main.getDominosReivews();
 		users.add(String);
 		File usersFile = new File("src/dominosString.txt");

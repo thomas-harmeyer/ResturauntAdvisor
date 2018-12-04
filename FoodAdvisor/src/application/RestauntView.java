@@ -33,27 +33,26 @@ public class RestauntView extends Application {
 		restHB.get(0).setAlignment(Pos.CENTER);
 		restHB.get(0).setSpacing(10);
 		Container.getChildren().add(restHB.get(0));
-		//Putting in resturaunts
+		// Putting in resturaunts
 		restHB.add(new HBox());
-		rests.add(new Restaraunt("Papa Johns","$$",3,"Fast Food","Pizza"));
-		
+		rests.add(new Restaraunt("Papa Johns", "$$", 3, "Fast Food", "Pizza"));
+
 		restHB.add(new HBox());
-		rests.add(new Restaraunt("Pizza hub","$",3,"Fast Food","Pizza"));
-		
+		rests.add(new Restaraunt("Pizza hub", "$", 3, "Fast Food", "Pizza"));
+
 		restHB.add(new HBox());
-		rests.add(new Restaraunt("GLasss Nickel","$$$$",5,"Fast Food","Pizza"));
-		
-		
+		rests.add(new Restaraunt("GLasss Nickel", "$$$$", 5, "Fast Food", "Pizza"));
+
 		//
 		String[] restStr = new String[5];
-		int x=1;
-		for(Restaraunt rest : rests){
+		int x = 1;
+		for (Restaraunt rest : rests) {
 			String[] info = rest.toStringArray();
-			for(String infoStr : info){
+			for (String infoStr : info) {
 				Text infoText = new Text(infoStr);
 				restHB.get(x).getChildren().add(infoText);
-				System.out.println("Did it:"+x+" | "+infoText);
-				}
+				System.out.println("Did it:" + x + " | " + infoText);
+			}
 			restHB.get(x).setAlignment(Pos.CENTER);
 			restHB.get(x).setSpacing(10);
 			Container.getChildren().add(restHB.get(x));
@@ -67,4 +66,3 @@ public class RestauntView extends Application {
 		primaryStage.show();
 	}
 }
-

@@ -13,7 +13,7 @@ public class Dominos extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
+
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("final_project.fxml"));
@@ -21,5 +21,4 @@ public class Dominos extends Application {
 		primaryStage.show();
 	}
 
-	
 }

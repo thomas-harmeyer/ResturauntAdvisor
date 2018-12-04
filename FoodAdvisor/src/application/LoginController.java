@@ -28,7 +28,6 @@ public class LoginController {
 	@FXML
 	private TextField passwordTextField;
 
-
 	public void loginButtonClick() throws ClassNotFoundException, IOException {
 
 		if (LoginController.check(usernameTextField.getText(), passwordTextField.getText(),
@@ -41,8 +40,9 @@ public class LoginController {
 	}
 
 	public void newButtonClick() throws ClassNotFoundException, IOException {
-			LoginController.addUser(new User(usernameTextField.getText(), passwordTextField.getText()));
+		LoginController.addUser(new User(usernameTextField.getText(), passwordTextField.getText()));
 	}
+
 	@FXML
 	public void goHome(Button button) throws IOException {
 		System.out.println("TRYING");

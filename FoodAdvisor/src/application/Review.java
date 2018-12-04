@@ -12,8 +12,9 @@ public class Review implements Serializable {
 	public String toString() {
 		return "Review [user=" + user + ", review=" + review + "]";
 	}
-	public Review () {
-		
+
+	public Review() {
+
 	}
 
 	private User user;
