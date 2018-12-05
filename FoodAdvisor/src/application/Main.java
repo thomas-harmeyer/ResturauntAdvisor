@@ -80,6 +80,7 @@ public class Main extends Application implements Initializable {
 		if (Main.user != null) {
 			addReview(reviewText.getText());
 			addReview(Main.user.getUsername());
+			handleEventDominos(event);
 		}else {
 			//Ishan put that login code
 			/*
@@ -114,7 +115,6 @@ public class Main extends Application implements Initializable {
 			stage.show();
 		}
 	}
-	// }
 
 	public static ArrayList<String> getDominosReivews() throws IOException, ClassNotFoundException {
 		File usersFile = new File("src/dominosString.txt");
