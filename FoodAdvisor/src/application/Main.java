@@ -80,7 +80,20 @@ public class Main extends Application implements Initializable {
 		if (Main.user != null) {
 			addReview(reviewText.getText());
 			addReview(Main.user.getUsername());
-			handleEventDominos(event);
+			final Stage stage = (Stage) searchMenuBar.getScene().getWindow();
+			try {
+				VBox root = new VBox();
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation(Main.class.getResource("DominosView.fxml"));
+				root = (VBox) loader.load();
+				Scene scene = new Scene(root);
+				Stage stage = (Stage) searchMenuBar.getScene().getWindow();;
+				stage.setScene(scene);
+				stage.show();
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
 		}else {
 			//Ishan put that login code
 			/*
